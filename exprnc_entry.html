@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Experience</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo_bare.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <nav class="info-nav">
+         <div class="navbar-left">
+        <img src="resources/logo_bare.png" alt="ERU Logo" class="logo">
+        <div>
+            <h2>ERU Alumni Portal</h2>
+            <p>Egyptian Russian University</p>
+        </div>
+    </div>
+        <ul class="info-nav-links">
+            <li><a href="display_dashboard.html">Profile</a></li>
+            <li><a href="add_edu.html">Qualifications</a></li>
+            <li><a href="#" class="active">Experience</a></li>
+            <li><a href="login.html" class="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+ <div class="exp-form-container">
+        <div class="exp-form-card">
+            <h2 class="exp-form-title">New Experience</h2>
+            <p class="exp-form-subtitle">Add details about your work or training experience</p>
+
+            
+            <div class="exp-form-group">
+                <label>Experience type</label>
+                <div class="exp-radio-group">
+                    <label><input type="radio" name="expType" value="training" checked> Training</label>
+                    <label><input type="radio" name="expType" value="job"> Job</label>
+                </div>
+            </div>
+
+            
+            <div class="exp-form-row">
+                <div class="exp-form-group">
+                    <label>Start date</label>
+                    <input type="date" name="startDate">
+                </div>
+                <div class="exp-form-group">
+                    <label>End date</label>
+                    <input type="date" name="endDate">
+                </div>
+            </div>
+
+            
+            <h3 class="exp-section-title">Organization Information</h3>
+
+            
+            <div class="exp-form-row">
+                <div class="exp-form-group">
+                    <label>Organization Sector</label>
+                    <select name="sector">
+                        <option>Select Organization Sector</option>
+                        <option>IT</option>
+                        <option>Education</option>
+                        <option>Healthcare</option>
+                        <option>Finance</option>
+                    </select>
+                </div>
+                <div class="exp-form-group">
+                    <label>Organization Name</label>
+                    <input type="text" placeholder="Enter Organization Name">
+                </div>
+            </div>
+
+            <div class="exp-form-row">
+                <div class="exp-form-group">
+                    <label>Organization Address</label>
+                    <input type="text" placeholder="Enter Organization Address">
+                </div>
+                <div class="exp-form-group">
+                    <label>Organization Phone</label>
+                    <input type="text" placeholder="Enter Organization Phone">
+                </div>
+            </div>
+
+            <div class="exp-form-group">
+                <label>Other Info</label>
+                <input type="text" placeholder="Such as Website">
+            </div>
+
+            
+            <button class="exp-primary-btn exp-full-width"><a style="color: white; text-decoration: none;" href="display_dashboard.html">Save</a></button>
+        </div>
+    </div>
+
+<script>
+    document.querySelectorAll('.save-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const form = this.closest('.exp-form-card');
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            console.log(data);
+            
+        });
+    });
+</script>
+
+   
+
+</body>
+
+<footer class="info-footer">
+        <p style="color: rgb(255, 0, 0);">&copy; 2023 ERU Alumni. All rights reserved.</p>
+        
+</footer>
+</html>

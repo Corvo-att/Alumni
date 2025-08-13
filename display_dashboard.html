@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo_bare.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <nav class="info-nav">
+        <div class="navbar-left">
+        <img src="resources/logo_bare.png" alt="ERU Logo" class="logo">
+        <div>
+            <h2>ERU Alumni Portal</h2>
+            <p>Egyptian Russian University</p>
+        </div>
+    </div>
+        <ul class="info-nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="add_edu.html">Qualifications</a></li>
+            <li><a href="exprnc_entry.html">Experience</a></li>
+            <li><a href="login.html" class="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="info-container">
+        <h1 class="info-page-title">Alumni Information Dashboard</h1>
+        <div class="info-sections">
+            
+            <div class="info-card">
+                <h2>Personal Information</h2>
+                <ul>
+                    <li><strong>National ID:</strong> 12345678901234</li>
+                    <li><strong>Email:</strong> user@example.com</li>
+                    <li><strong>Academic ID:</strong> 2020-ERU-001</li>
+                    <li><strong>Address:</strong> <span class="editable">Edit</span></li>
+                    <li><strong>Phone Number:</strong> <span class="editable">Edit</span></li>
+                    <li><strong>Birth Date:</strong> <span class="editable">Edit</span></li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>Academic Information</h2>
+                <ul>
+                    <li><strong>Graduation Year:</strong> <span class="editable">Edit</span></li>
+                    <li><strong>Bachelor's Degree:</strong> <span class="editable">Edit</span></li>
+                    <li><strong>Graduation Major:</strong> <span class="editable">Edit</span></li>
+                    <li><strong>Graduation Project Title:</strong> <span class="editable">Edit</span></li>
+                </ul>
+                
+            </div>
+
+        </div>
+
+        <div class="info-card full-width">
+            <h2>Work & Training Experience</h2> <button class="primary-btn"><a style="text-decoration: none; color: rgb(0, 0, 0);" href="exprnc_entry.html">Add Experience</a></button>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Experience Type</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Organization Sector</th>
+                        <th>Organization Name</th>
+                        <th>Organization Address</th>
+                        <th>Organization Phone</th>
+                        <th>Other Info</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Internship</td>
+                        <td>2022-06-01</td>
+                        <td>2022-08-01</td>
+                        <td>IT</td>
+                        <td>ABC Tech</td>
+                        <td>Cairo, Egypt</td>
+                        <td>+20 100 123 4567</td>
+                        <td>-</td>
+                        <td><button class="delete-btn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Full-Time</td>
+                        <td>2023-01-01</td>
+                        <td>Present</td>
+                        <td>Software</td>
+                        <td>XYZ Solutions</td>
+                        <td>Giza, Egypt</td>
+                        <td>+20 101 234 5678</td>
+                        <td>Lead Developer</td>
+                        <td><button class="delete-btn">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+<footer class="info-footer">
+        <p style="color: rgb(255, 0, 0);">&copy; 2023 ERU Alumni. All rights reserved.</p>
+        
+</footer>
+
+<script>
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const row = this.closest('tr');
+            row.parentNode.removeChild(row);
+        });
+    });
+</script>
+
+</html>

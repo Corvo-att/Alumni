@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo_bare.ico">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+ 
+<header class="navbar">
+    <div class="navbar-left">
+        <img src="resources/logo_transparent.png" alt="ERU Logo" class="logo">
+        <div>
+            <h2>ERU Alumni Portal</h2>
+            <p>Egyptian Russian University</p>
+        </div>
+    </div>
+    <div class="navbar-right">
+        <a class="dash_btn" href="display_dashboard.html" class="active">Dashboard</a>
+
+        <div class="welcome-container">
+            <p class="welcome">Welcome, Alumni</p>
+            <span id="date-time"></span>
+        </div>
+        <a class="logout-btn" href="login.html">Logout</a>
+    </div>
+</header>
+
+
+<main class="dashboard">
+
+       <div class="stats">
+           <div class="stat-card blue">
+               <h2>2,543</h2>
+                <p>Total Alumni</p>
+            </div>
+            <div class="stat-card red">
+                <h2>156</h2>
+                <p>New Graduates</p>
+            </div>
+            <div class="stat-card pink">
+                <h2>89%</h2>
+                <p>Employment Rate</p>
+            </div>
+        </div>
+
+        
+        <div class="cards">
+            <div class="info-card blue">
+                <div class="icon">👤</div>
+                <h3>Personal Information</h3>
+                <p>Update your identification details</p>
+                <button><a class="button" href="personal_info.html">Manage</a></button>
+            </div>
+            <div class="info-card red">
+                <div class="icon">🎓</div>
+                <h3>Academic Information</h3>
+                <p>Manage your educational background</p>
+                <button><a class="button" href="add_edu.html">Manage</a></button>
+            </div>
+            <div class="info-card pink">
+                <div class="icon">💼</div>
+                <h3>Work Experience</h3>
+                <p>Track your professional journey</p>
+                <button><a class="button" href="exprnc_entry.html">Manage</a></button>
+            </div>
+        </div>
+    </main>
+
+<script>
+ 
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.getElementById("date-time");
+  if (!el) {
+    console.error('Element with id="date-time" not found.');
+    return;
+  }
+
+function renderDate() {
+    el.textContent = new Date().toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+  }
+
+renderDate(); 
+  const now = new Date();
+  const midnight = new Date(
+    now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0
+  );
+  const msUntilMidnight = midnight.getTime() - now.getTime();
+
+  setTimeout(() => {
+    renderDate();
+    setInterval(renderDate, 24 * 60 * 60 * 1000); // every day
+  }, msUntilMidnight);
+});
+</script>
+
+</body>
+
+
+<footer class="info-footer">
+        <p style="color: rgb(255, 0, 0);">&copy; 2023 ERU Alumni. All rights reserved.</p>
+        
+</footer>
+</html>

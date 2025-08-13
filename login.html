@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo_bare.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class= "login-container">
+        <h1>Login</h1>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <a class="login-button" href="dashboard.html">Login</a>
+        </form>
+        <p>No account? <a href="#">Register</a>.</p>
+    </div>
+</body>
+
+<script>
+
+document.getElementById("email").placeholder = "Enter your email";
+document.getElementById("password").placeholder = "Enter your password";
+
+</script>
+
+<footer class="info-footer">
+        <p style="color: rgb(255, 0, 0);">&copy; 2023 ERU Alumni. All rights reserved.</p>
+        
+</footer>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Education</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo_bare.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="add-education-page">
+
+    <nav class="info-nav">
+          <div class="navbar-left">
+        <img src="resources/logo_bare.png" alt="ERU Logo" class="logo">
+        <div>
+            <h2>ERU Alumni Portal</h2>
+            <p>Egyptian Russian University</p>
+        </div>
+    </div>
+        <ul class="info-nav-links">
+            <li><a href="display_dashboard.html">Profile</a></li>
+            <li><a href="#" class="active" >Qualifications</a></li>
+            <li><a href="exprnc_entry.html" >Experience</a></li>
+            <li><a href="login.html" class="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Education Form Container -->
+    <div class="edu-form-container">
+        <div class="edu-icon">
+            🎓
+        </div>
+        <h2 class="edu-title">Academic Information</h2>
+        <p class="edu-subtitle">Tell us about your educational background at ERU</p>
+
+        <form class="edu-form">
+            <div class="edu-form-row">
+                <div class="edu-input-group">
+                    <label>Academic ID</label>
+                    <input type="text" placeholder="Enter your Academic ID">
+                </div>
+                <div class="edu-input-group">
+                    <label>Graduation Year</label>
+                    <select>
+                        <option>2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                        <option>2021</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="edu-form-row">
+                <div class="edu-input-group">
+                    <label>Bachelor's Degree</label>
+                    <select>
+                        <option>Architecture</option>
+                        <option>Computer Science</option>
+                        <option>Business Administration</option>
+                    </select>
+                </div>
+                <div class="edu-input-group">
+                    <label>Graduation Major</label>
+                    <select>
+                        <option>Electrical Engineering</option>
+                        <option>Mechanical Engineering</option>
+                        <option>Civil Engineering</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="edu-input-group">
+                <label>Graduation Project Title</label>
+                <input type="text" placeholder="Enter your project title">
+            </div>
+
+            <div class="edu-buttons">
+                <button type="button" class="edu-btn-cancel">Back</button>
+                <button type="submit" class="edu-btn-next">Next ➜</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
