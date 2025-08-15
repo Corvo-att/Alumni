@@ -9,15 +9,15 @@
 </head>
 <body>
 
-    
+
     <nav class="info-nav">
         <div class="navbar-left">
-        <img src="resources/logo_bare.png" alt="ERU Logo" class="logo">
-        <div>
-            <h2>ERU Alumni Portal</h2>
-            <p>Egyptian Russian University</p>
+            <img src="resources/logo_bare.png" alt="ERU Logo" class="logo">
+            <div>
+                <h2>ERU Alumni Portal</h2>
+                <p>Egyptian Russian University</p>
+            </div>
         </div>
-    </div>
         <ul class="info-nav-links">
             <li><a href="dashboard.html" class="active">Dashboard</a></li>
             <li><a href="add_edu.html">Qualifications</a></li>
@@ -26,11 +26,11 @@
         </ul>
     </nav>
 
-    
+
     <div class="info-container">
         <h1 class="info-page-title">Alumni Information Dashboard</h1>
         <div class="info-sections">
-            
+
             <div class="info-card">
                 <h2>Personal Information</h2>
                 <ul>
@@ -51,7 +51,7 @@
                     <li><strong>Graduation Major:</strong> <span class="editable">Edit</span></li>
                     <li><strong>Graduation Project Title:</strong> <span class="editable">Edit</span></li>
                 </ul>
-                
+
             </div>
 
         </div>
@@ -102,18 +102,20 @@
     </div>
 
 </body>
+
+
+</html>
+
 <footer class="info-footer">
-        <p style="color: rgb(255, 0, 0);">&copy; 2023 ERU Alumni. All rights reserved.</p>
-        
+    <p style="color: rgb(255, 0, 0);">&copy; 2023 ERU Alumni. All rights reserved.</p>
+
 </footer>
 
 <script>
     document.querySelectorAll('.delete-btn').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const row = this.closest('tr');
             row.parentNode.removeChild(row);
         });
     });
 </script>
-
-</html>
