@@ -385,7 +385,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #00274d;
+    background: #000000;
     padding: 10px 20px;
     color: white;
 }
@@ -421,16 +421,6 @@ button:hover {
 .info-nav-links a:hover,
 .info-nav-links .active {
     background: #0056b3;
-}
-
-
-.info-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0, 0, 0, 1);
-    padding: 10px 20px;
-    color: white;
 }
 
 .info-nav-logo {
@@ -710,7 +700,7 @@ button:hover {
     color: #ff4d88;
 }
 
-/* Form Container with Frosted Glass Effect */
+
 .edu-form-container {
     max-width: 800px;
     margin: 4rem auto;
@@ -722,7 +712,7 @@ button:hover {
     text-align: center;
 }
 
-/* Icon */
+
 .edu-icon {
     font-size: 2.5rem;
     background: radial-gradient(circle, #ff0000, #000000c5);
@@ -736,7 +726,6 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-/* Headings */
 .edu-title {
     font-weight: bold;
     font-size: 1.8rem;
@@ -748,7 +737,6 @@ button:hover {
     margin-bottom: 2rem;
 }
 
-/* Form Layout */
 .edu-form {
     display: flex;
     flex-direction: column;
@@ -782,7 +770,6 @@ button:hover {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Buttons */
 .edu-buttons {
     display: flex;
     justify-content: space-between;
